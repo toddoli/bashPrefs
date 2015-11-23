@@ -1,7 +1,7 @@
-#Description
+# Description
 I use this repo to quickly get my Preferences back an all OSX devices I have
 
-#Setup
+# Setup
 ```
 git clone git@github.com:toddoli/OSXPrefs.git
 cd OSXPrefs
