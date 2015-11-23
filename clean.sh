@@ -24,7 +24,7 @@ fi
 #Link ~/.vimrc to custom vimrc file
 if [ -e ~/.vimrc.OLD ]; then
     rm ~/.vimrc
-    mv ~/.vimrc.OLD ~/vimrc
+    mv ~/.vimrc.OLD ~/.vimrc
 else
     echo "~/.vimrc was not backed up or has been deleted"
 fi
