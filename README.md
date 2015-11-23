@@ -7,3 +7,9 @@ git clone git@github.com:toddoli/OSXPrefs.git
 cd OSXPrefs
 ./setup.sh
 ```
+
+# Uninstall
+```
+cd OSXPrefs
+./clean.sh
+```

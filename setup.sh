@@ -6,17 +6,19 @@
 #
 PWD=$(pwd)
 
-#Replace current .Profile by custom .Profile
+#Replace current .Profile file by custom .Profile and backup (used for clean)
 if [ -f ~/.Profile ]; then
     mv ~/.Profile ~/.Profile.OLD
 fi
 ln -s $PWD/.Profile ~/.Profile
 
+#Replace current .vim folder by custom .vim and backup (used for clean)
 if [ -e ~/.vim ]; then
     mv ~/.vim ~/.vim.OLD
 fi
 ln -s $PWD/.vim ~/.vim
 
+#Link ~/.vimrc to custom vimrc file
 if [ -f ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc.OLD
 fi
