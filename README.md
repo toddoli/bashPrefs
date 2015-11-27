@@ -1,5 +1,5 @@
 # Description
-I use this repo to quickly get my Preferences back an all OSX devices I have
+I use this repo to quickly get my Preferences back an all Linux/OSX devices I have
 
 # Setup
 ```
