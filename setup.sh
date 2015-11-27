@@ -14,10 +14,10 @@ if [ "$(uname)" == "Darwin" ]; then
     PROFILE_FILE=".Profile"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     OS_NAME="Linux"
-    PROFILE_FILE=".bashrc"
+    PROFILE_FILE=".profile"
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     OS_NAME="Cygwin"
-    PROFILE_FILE=".bashrc"
+    PROFILE_FILE=".profile"
 fi
 
 #Replace current PROFILE_FILE file by custom PROFILE_FILE and backup (used for clean)
