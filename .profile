@@ -26,10 +26,6 @@ _complete_ssh_hosts ()
 }
 complete -F _complete_ssh_hosts ssh
 
-#git prompt
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-    source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
-  fi
 PS1='\u `pwd` $(__git_ps1 "(%s)")\$ '
 
 #export LC_CTYPE="en_US.UTF-8"
