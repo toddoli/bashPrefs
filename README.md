@@ -3,7 +3,7 @@ I use this repo to quickly get my Preferences back an all Linux/OSX devices I ha
 
 # Setup
 ```
-git clone git@github.com:toddoli/OSXPrefs.git
+git clone git@github.com:toddoli/bashPrefs.git
 cd OSXPrefs
 ./setup.sh
 ```
