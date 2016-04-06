@@ -17,16 +17,16 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     OS_NAME="Linux"
     PROFILE_FILE_DST=".profile_linux"
-    PROFILE_FILE_SRC=".profile_linux"
+    PROFILE_FILE_SRC=".profile"
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     OS_NAME="Cygwin"
     PROFILE_FILE_DST=".profile_linux"
-    PROFILE_FILE_SRC=".profile_linux"
+    PROFILE_FILE_SRC=".profile"
 fi
 
 #Replace current PROFILE_FILE_SRC file by custom PROFILE_FILE and backup (used for clean)
 if [ -f ~/$PROFILE_FILE_SRC ]; then
-    mv ~/$PROFILE_FILE_SRC ~/$PROFILE_FILE.OLD
+    mv ~/$PROFILE_FILE_SRC ~/$PROFILE_FILE_SRC.OLD
 fi
 ln -s $PWD/$PROFILE_FILE_DST ~/$PROFILE_FILE_SRC
 
