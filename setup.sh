@@ -6,25 +6,29 @@
 #
 PWD=$(pwd)
 OS_NAME="Darwin"
-PROFILE_FILE=".Profile"
+PROFILE_FILE_SRC=".Profile"
+PROFILE_FILE_DST=".profile_OSX"
 
 #Check OS
 if [ "$(uname)" == "Darwin" ]; then
     OS_NAME="Darwin"
-    PROFILE_FILE=".profile_OSX"
+    PROFILE_FILE_DST=".profile_OSX"
+    PROFILE_FILE_SRC=".Profile"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     OS_NAME="Linux"
-    PROFILE_FILE=".profile_linux"
+    PROFILE_FILE_DST=".profile_linux"
+    PROFILE_FILE_SRC=".profile_linux"
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     OS_NAME="Cygwin"
-    PROFILE_FILE=".profile_linux"
+    PROFILE_FILE_DST=".profile_linux"
+    PROFILE_FILE_SRC=".profile_linux"
 fi
 
-#Replace current PROFILE_FILE file by custom PROFILE_FILE and backup (used for clean)
-if [ -f ~/$PROFILE_FILE ]; then
-    mv ~/$PROFILE_FILE ~/$PROFILE_FILE.OLD
+#Replace current PROFILE_FILE_SRC file by custom PROFILE_FILE and backup (used for clean)
+if [ -f ~/$PROFILE_FILE_SRC ]; then
+    mv ~/$PROFILE_FILE_SRC ~/$PROFILE_FILE.OLD
 fi
-ln -s $PWD/$PROFILE_FILE ~/$PROFILE_FILE
+ln -s $PWD/$PROFILE_FILE_DST ~/$PROFILE_FILE_SRC
 
 #Replace current .vim folder by custom .vim and backup (used for clean)
 if [ -e ~/.vim ]; then
