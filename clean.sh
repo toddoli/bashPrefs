@@ -6,9 +6,9 @@
 #
 
 #Replace current .Profile file by OLD .Profile if backed up
-if [ -f ~/.Profile.OLD ]; then
-    rm ~/.Profile
-    mv ~/.Profile.OLD ~/.Profile
+if [ -f ~/.profile.OLD ]; then
+    rm ~/.profile
+    mv ~/.profile.OLD ~/.profile
 else
     echo "~/.Profile file was not backed up or has been deleted"
 fi

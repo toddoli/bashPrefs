@@ -11,13 +11,13 @@ PROFILE_FILE=".Profile"
 #Check OS
 if [ "$(uname)" == "Darwin" ]; then
     OS_NAME="Darwin"
-    PROFILE_FILE=".Profile"
+    PROFILE_FILE=".profile_OSX"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     OS_NAME="Linux"
-    PROFILE_FILE=".profile"
+    PROFILE_FILE=".profile_linux"
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     OS_NAME="Cygwin"
-    PROFILE_FILE=".profile"
+    PROFILE_FILE=".profile_linux"
 fi
 
 #Replace current PROFILE_FILE file by custom PROFILE_FILE and backup (used for clean)
