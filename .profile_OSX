@@ -41,7 +41,6 @@ if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
   fi
 PS1='\u `pwd` $(__git_ps1 "(%s)")\$ '
 
-#export LC_CTYPE="en_US.UTF-8"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.1.1
 export PATH=$PATH:$EC2_HOME/bin
