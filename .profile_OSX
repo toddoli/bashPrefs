@@ -1,4 +1,3 @@
-alias querydns='ssh nse1.enovance.com /root/bin/querydns -s $@'
 alias ll='ls -laG'
 alias grep='grep --color=auto'
 
@@ -39,7 +38,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
     source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
   fi
-PS1='\u `pwd` $(__git_ps1 "(%s)")\$ '
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.1.1
