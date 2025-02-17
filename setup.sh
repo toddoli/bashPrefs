@@ -6,14 +6,14 @@
 #
 PWD=$(pwd)
 OS_NAME="Darwin"
-PROFILE_FILE_SRC=".Profile"
-PROFILE_FILE_DST=".profile_OSX"
+PROFILE_FILE_SRC=".zshrc"
+PROFILE_FILE_DST=".zshrc"
 
 #Check OS
 if [ "$(uname)" == "Darwin" ]; then
     OS_NAME="Darwin"
-    PROFILE_FILE_DST=".profile_OSX"
-    PROFILE_FILE_SRC=".Profile"
+    PROFILE_FILE_DST=".zshrc"
+    PROFILE_FILE_SRC=".zshrc"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     OS_NAME="Linux"
     PROFILE_FILE_DST=".profile_linux"

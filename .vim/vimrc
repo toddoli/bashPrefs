@@ -35,7 +35,7 @@ set smarttab
 set tabpagemax=15
 
 "Color
-colorscheme delek " set up a color scheme in the gvim interface
+colorscheme molokai " set up a color scheme in the gvim interface
 
 let mywinfont="Monospace:h10:cANSI"
 

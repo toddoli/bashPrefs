@@ -6,9 +6,9 @@
 #
 
 #Replace current .Profile file by OLD .Profile if backed up
-if [ -f ~/.profile.OLD ]; then
-    rm ~/.profile
-    mv ~/.profile.OLD ~/.profile
+if [ -f ~/.zshrc.OLD ]; then
+    rm ~/.zshrc
+    mv ~/.zshrc.OLD ~/.zshrc
 else
     echo "~/.Profile file was not backed up or has been deleted"
 fi
